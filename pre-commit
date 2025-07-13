@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Get the current git user email
+user_email=$(git config user.email)
+
+# Check if the email is "h6@gmail.com"
+if [[ "$user_email" != "mmnwat6@gmail.com" ]]; then
+	echo "Commit rejected: Your git user.email must be 'h6@gmail.com'."
+	exit 1
+fi
